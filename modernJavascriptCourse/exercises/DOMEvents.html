@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      margin: 10px 0;
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="copy-me">This is text entailing years and years of <br> knowledge; all here for you to just read. <br></p>
+  <div class="box">move the mouse around this box</div>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+  <script>
+  //.....................
+
+
+//don't copy
+const copy = document.querySelector('.copy-me');
+
+copy.addEventListener('copy', () => {
+    console.log(`you trying to copy my shit?!`);
+    alert('Ay! Stop trying to copy my shit?!');
+});
+
+
+
+
+//moving mouse over the box
+const box = document.querySelector('.box');
+
+box.addEventListener('mousemove', e => {
+    //console.log(e);
+    //console.log(e.offsetX, e.offsetY);
+box.textContent = `x position is :${e.offsetX} and the
+y position is:${e.offsetY}`;
+});
+
+
+//scrolling watch
+document.addEventListener('wheel', e => {
+    console.log(e.pageX, e.pageY);
+})
+
+  //.................
+  
+  </script>
+</body>
+</html>

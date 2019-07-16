@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+  <style>
+    li{
+      list-style-type: none;
+      max-width: 200px;
+      padding: 8px;
+      margin: 8px auto;
+      background: #eee;
+      border: 1px dotted #ddd;
+    }
+  </style>
+</head>
+<body>
+    <h1 style="color: blue">To dos</h1>
+
+  <ul>
+    <li>buy milk</li>
+    <li>read a book</li>
+    <li>play the guitar</li>
+    <li>pay the bills :(</li>
+  </ul>
+
+  <button style="color: green">click me</button>
+
+  <script >
+//the javascript begins...............
+
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', ()=> {
+//     console.log('you clicked me');
+// });
+const ul = document.querySelector('ul');
+const items = document.querySelectorAll('li');
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const li = document.createElement('li');
+    li.textContent = 'something new to-do';
+    ul.append(li);//or .prepend for top of list
+   //ul.innerHTML += '<li>something new</li>';
+});
+
+// items.forEach(item => {
+//     item.addEventListener('click', eventObject => {
+//     console.log(`you clicked LI`);
+//     eventObject.stopPropagation();
+//     //console.log(eventObject);
+//     console.log(eventObject.target);
+//     //eventObject.target.style.textDecoration = 'line-through';
+//     eventObject.target.remove();
+
+// });
+// });
+
+ul.addEventListener('click', eventObject => {
+    //console.log('event in UL');
+    //console.log(eventObject.target);
+    if(eventObject.target.tagName === 'LI'){
+        eventObject.target.remove();
+    }
+});
+
+
+//the javascript ends...................
+  </script>
+</body>
+</html>
