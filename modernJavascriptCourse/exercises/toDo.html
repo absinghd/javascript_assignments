@@ -16,18 +16,22 @@
   </style>
 </head>
 <body>
-    <h1 style="color: blue">To dos</h1>
+    <h1 style="color: blue; text-align:center" >To dos</h1>
 
   <ul>
     <li>buy milk</li>
     <li>read a book</li>
-    <li>play the guitar</li>
+    <li>beers & ideas demo</li>
     <li>pay the bills :(</li>
   </ul>
-
-  <button style="color: green">click me</button>
-
-  <script >
+<div style="text-align: center">
+  <button style="color: rgb(17, 48, 228); cursor:pointer; border-radius: 1px; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 3px 0 rgba(0,0,0,0.19)">click me</button>
+  </div>
+  <br><br>
+<div style= "text-align: center">
+  <a href = "DOMEvents.html"; style="background:rgba(10, 165, 236, 0.76); color: white;text-decoration: none;padding: 6px 10px;text-align: center; border-radius: 2px;">Check out these things I've messed around with!</a>
+ </div>
+ <script >
 //the javascript begins...............
 
 // const button = document.querySelector('button');
@@ -41,7 +45,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
     const li = document.createElement('li');
-    li.textContent = 'something new to-do';
+    li.textContent = 'new to-do task added';
     ul.append(li);//or .prepend for top of list
    //ul.innerHTML += '<li>something new</li>';
 });
