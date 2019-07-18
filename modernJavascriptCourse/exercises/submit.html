@@ -20,6 +20,12 @@
       padding: 4px;
       border-radius: 1px;
     }
+    .success{
+      border: 2px solid limegreen;
+    }
+    .error{
+      border: 2px solid crimson;
+    }
   </style>
 </head>
 <body>
@@ -33,16 +39,15 @@
   <script>
   
   //...................
-  const form = document.querySelector('.signup-form');
-
+const form = document.querySelector('.signup-form');
 const feedback = document.querySelector('.feedback');
+const pattern = /^bro$|^bicky$|^romain$|^guest$/;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
     feedback.textContent = ``;
 
     const username = form.username.value;
-const pattern = /^bro$|^bicky$|^romain$|^guest$/;
     let result = pattern.test(username);
 
 if(result){
@@ -52,6 +57,20 @@ else {
     feedback.textContent = `You shall not pass!`;
 }
 });
+
+//live feedback
+form.username.addEventListener('keyup', e => {
+    //console.log(e.target.value, form.username.value);
+    if(pattern.test(e.target.value)){
+        //console.log('passed');
+        form.username.setAttribute('class', 'success');
+    }
+    else {
+        //console.log('fail');
+        form.username.setAttribute('class', 'error');
+    }
+    }
+);
   //........................
   </script>
 </body>
