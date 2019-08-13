@@ -1,10 +1,9 @@
-const products = [
-    {name: 'gold star', price: 30},
-    {name: 'green shell', price: 10},
-    {name: 'red shell', price: 40},
-    {name: 'banana skin', price: 5},
-    {name: 'mushroom', price: 50}
-  ];
+console.log(1);
+console.log(2);
 
-  const filtered = products.filter(product => product.price >20);
-  
+setTimeout(() => {
+  console.log('callback function fired')
+}, 1);
+
+console.log(3);
+console.log(4);
