@@ -13,13 +13,10 @@ const getTodos = (callback) => {
 
   });
   
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
+  request.open('GET', 'todos.json');
   request.send();
 
 };
-
-console.log(1);
-console.log(2);
 
 getTodos((err, data) => {
   console.log('callback function fired');
@@ -29,6 +26,3 @@ getTodos((err, data) => {
     console.log(data);
   }
 });
-
-console.log(3);
-console.log(4);
