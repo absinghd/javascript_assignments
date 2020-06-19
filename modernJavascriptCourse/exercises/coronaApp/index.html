@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Covid-19 Stats</title>
+</head>
+<body>
+
+    <div class="container my-5 mx-auto">
+
+        <h1 class="text-muted text-center my-4">Covid-19 Stats</h1>
+    
+        <form class="change-location my-4 text-center text-muted">
+          <label for="state">Enter a location for Coronavirus information</label>
+          <input type="text" id="stateInput" class="form-control p-4">
+        </form>
+        <button id="getData" onclick="getInputValue();">get the stats</button>
+        
+        <div class="card shadow-lg rounded">
+          <img src="https://geology.com/state-map/california.shtml" class="graph card-img-top">
+          <div class="icon bg-light mx-auto text-center">
+            <!-- graph icon here later -->
+          </div>
+          <div class="text-muted text-uppercase text-center details">
+            <h5 class="my-3 State" id = "State">State name</h5>
+            <div class="my-3">Total cases</div>
+            <div class="my-3">Total deaths</div>
+            <!-- 
+              <div class="display-4 my-4">
+              <span>total deaths</span>
+              <span>total population</span>
+            </div>
+          -->
+          </div>
+        </div>
+        
+      </div> 
+      
+  
+  <script src="scripts/stats.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+  <canvas id="myChart" width="400" height="400"></canvas>
+<script>
+
+
+</script>
+</body>
+</html>
